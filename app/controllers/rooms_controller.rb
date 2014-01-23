@@ -24,7 +24,7 @@ class RoomsController < ApplicationController
 
   	if @room.save
   		flash[:success]= "You've added your room"
-  		redirect_to room_path(@room)
+  		redirect_to root_path(@room)
 
   	else
   		render "new"
@@ -43,9 +43,9 @@ class RoomsController < ApplicationController
 
   	@room = Room.find(params[:id])
 
-  	if @room.update(room_params)
+  	if @room.update(rooms_params)
   		flash[:success] = "Your room has been updated"
-  		redirect_to room_path(@room)
+  		redirect_to root_path(@room)
 
   	else
   		render "edit"
