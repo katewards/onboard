@@ -1,0 +1,11 @@
+<h2><%= @room.title %></h2>
+
+<p><%= @room.address %></p>
+
+<p><%= @room.latitude %> <%= @room.longitude %></p>
+
+
+<div class="actions">
+		<%= link_to "Edit", edit_room_path(@room), class: "button:" %>
+		<%= link_to "Delete", room_path(@room), method: :delete, class: "button", confirmation: "Are you sure?" %>
+	</div>
