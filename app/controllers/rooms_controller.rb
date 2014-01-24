@@ -25,7 +25,7 @@ class RoomsController < ApplicationController
 
   def create
 
-  	@room = current_user.rooms.new(room_params) 
+  	@room = current_user.rooms.new(rooms_params) 
 
   	if @room.save
   		flash[:success]= "You've added your room"
@@ -78,7 +78,7 @@ class RoomsController < ApplicationController
 
   def rooms_params
 
-  	params.require(:room).permit(:title, :address, :description, :max_guests, :bedrooms, :price)
+  	params.require(:room).permit(:title, :address, :description, :max_guests, :bedrooms, :price, :image)
   
   end
 
