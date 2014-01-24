@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	# associations
 	has_many :rooms
+	has_many :orders
 
 	# built into rails 4
 	has_secure_password
